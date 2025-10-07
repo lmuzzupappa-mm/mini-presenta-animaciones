@@ -1,0 +1,1 @@
+const wrapperEl = document.querySelector(".wrapper");
