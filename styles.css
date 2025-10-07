@@ -26,8 +26,16 @@ body {
 }
 
 .ball {
+  animation: bounce var(--duration) infinite alternate cubic-bezier(0.15, 0.68, 0.65, 1.00);
+
   width: 50px;
   height: 50px;
   border-radius: 45%;
   background: var(--ball);
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(calc(var(--distance) * -1));
+  }
 }
