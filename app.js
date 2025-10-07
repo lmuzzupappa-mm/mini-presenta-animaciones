@@ -6,4 +6,6 @@ const bar = document.querySelector('.bar');
 sliderEl.addEventListener('input', (event) => {
   const rotation = event.target.value;
   sliderValueEl.textContent = `${rotation}deg`;
+
+  bar.style.setProperty('--rotation', `${rotation}deg`)
 });

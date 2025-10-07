@@ -24,6 +24,8 @@ body {
 }
 
 .bar {
+  --rotation: 0deg;
+  animation: twist 750ms infinite alternate ease-in-out;
   width: 150px;
   height: 30px;
   border-radius: 3px;
@@ -46,4 +48,14 @@ input {
   display: block;
   width: 400px;
   accent-color: var(--ball);
+}
+
+@keyframes twist {
+  from {
+    transform: rotate(var(--rotation));
+  }
+
+  to {
+    transform: rotate(calc(var(--rotation) * -1));
+  }
 }
