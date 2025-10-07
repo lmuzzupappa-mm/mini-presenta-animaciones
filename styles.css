@@ -1,11 +1,19 @@
+:root {
+  --bg-1: light-dark(#e5e5f7, #494949);
+  --bg-2: light-dark(#444cf7, #222227);
+  --ball: light-dark(#f1c40f, #686de0);
+  --floor: light-dark(#1a1a1a, #e5e5f7);
+
+  color-scheme: light dark;
+}
+
 body {
   display: grid;
   place-content: center;
   height: 100vh;
-  background-color: #1a1a1a;
-  opacity: 1;
-  background: radial-gradient(circle, transparent 20%, #1a1a1a 20%, #1a1a1a 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #1a1a1a 20%, #1a1a1a 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#000000 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #000000 2px, #1a1a1a 2px) -1px 0;
-  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+  background-color: var(--bg-1);
+  background-image: radial-gradient(var(--bg-2) 0.5px, var(--bg-1) 0.5px);
+  background-size: 10px 10px;
 }
 
 .wrapper {
@@ -13,7 +21,7 @@ body {
   display: flex;
   gap: 16px;
   padding-inline: 16px;
-  border-bottom: 5px solid white;
+  border-bottom: 5px solid var(--floor);
   border-radius: 5px;
 }
 
@@ -21,6 +29,5 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 45%;
-  background: hsl(45deg 100% 50%);
-  background: oklch(0.87 0.2 90);
+  background: var(--ball);
 }
