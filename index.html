@@ -10,14 +10,14 @@
   <body>
     <main>
       <div class="wrapper">
-        <!-- Ball 1 should bounce 30px over .3s -->
-        <div class="ball"></div>
+        <div class="bar"></div>
 
-        <!-- Ball 2 should bounce 50px over .4s -->
-        <div class="ball"></div>
-
-        <!-- Ball 3 should bounce 70px over .5s -->
-        <div class="ball"></div>
+        <div class="controls">
+          <label for="slider"
+            >Rotation: <span id="slider-value">0deg</span></label
+          >
+          <input type="range" id="slider" min="0" max="180" value="0" />
+        </div>
       </div>
     </main>
   </body>
